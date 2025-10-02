@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kirang+Haerang&display=swap");
+
+/* About container using flexbox */
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
+    min-height: calc(100vh - 140px);
+}
+
+/* Main content styling with CSS positioning */
+.about-content {
+    background: #fffffff2;
+    border-radius: 20px;
+    padding: 3rem;
+    width: 100%;
+    max-width: 900px;
+    box-shadow: 0 20px 40px #0000001a;
+    position: relative;
+}
+
+/* Main title */
+.about-content h2 {
+    text-align: center;
+    font-size: 2.8rem;
+    color: #333;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    background: linear-gradient(45deg, #4CAF50, #FFD001);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-family: "Kirang Haerang", cursive;
+}
+
+/* Section headings */
+.about-content h3 {
+    font-size: 1.7rem;
+    color: #39BD65;
+    margin: 2rem 0 1rem;
+    font-weight: 400;
+    border-bottom: 2px solid #39BD65;
+    padding-bottom: 0.5rem;
+    position: relative;
+    font-family: "Kirang Haerang", cursive;
+}
+
+/* Paragraphs */
+.about-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Lists */
+.about-content ul {
+    margin: 1rem 0 2rem 1.5rem;
+    position: relative;
+}
+
+.about-content li {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #666;
+    margin-bottom: 0.8rem;
+    position: relative;
+    list-style: none;
+    font-family: "Poppins", sans-serif;
+}
+
+.about-content li::before {
+    content: "✦";
+    color: #FFD001;
+    font-weight: bold;
+    position: absolute;
+    left: -1.5rem;
+}
+
+.about-content strong {
+    color: #39BD65;
+    font-weight: 600;
+    font-family: "Kirang Haerang", cursive;
+}
+
+/* Decorative border effect */
+.about-content::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: linear-gradient(45deg, #39BD65, #FFD001, #39BD65);
+    border-radius: 25px;
+    z-index: -1;
+    opacity: 0.1;
+}
+
+/* Mobile responsive styles */
+@media screen and (max-width: 768px) {
+    /* Adjust hamburger menu for about page */
+    .navbar #hamburger-btn {
+        display: block;
+        cursor: pointer;
+    }
+    
+    /* Mobile navigation adjustments */
+    .navbar .all-links {
+        position: fixed;
+        left: -100%;
+        width: 300px;
+        display: block;
+        height: 100vh;
+        top: 75px;
+        background: #262626f2;
+        backdrop-filter: blur(10px);
+        transition: left 0.3s ease;
+    }
+
+    .navbar #menu-toggler:checked~.all-links {
+        left: 0;
+    }
+
+    .navbar .all-links li {
+        font-size: 18px;
+    }
+
+    .navbar .all-links a {
+        display: block;
+        padding: 15px 20px;
+        margin: 0;
+    }
+
+    /* About content mobile adjustments */
+    .about-container {
+        padding: 1rem;
+    }
+
+    .about-content {
+        padding: 2rem 1.5rem;
+    }
+
+    .about-content h2 {
+        font-size: 2.2rem;
+    }
+
+    .about-content h3 {
+        font-size: 1.4rem;
+    }
+
+    .about-content p {
+        font-size: 1rem;
+    }
+
+    .about-content li {
+        font-size: 0.95rem;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    /* Extra small screen adjustments */
+    .about-content {
+        padding: 1.5rem 1rem;
+    }
+    
+    .about-content h2 {
+        font-size: 1.9rem;
+    }
+    
+    .about-content h3 {
+        font-size: 1.3rem;
+    }
+    
+    /* Footer mobile layout */
+    footer div {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    footer .link {
+        gap: 1.5rem;
+    }
+}

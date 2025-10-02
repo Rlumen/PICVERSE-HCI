@@ -1,0 +1,260 @@
+/* Community Page Styles */
+.community-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+}
+
+.community-header {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.community-header h1 {
+  font-size: 2.5rem;
+  color: #262626;
+  margin-bottom: 15px;
+}
+
+.community-header p {
+  color: #666;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Forum Discussions */
+.forum-discussions {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 5px 15px #0000000d;
+}
+
+.forum-discussions h2 {
+  font-size: 1.8rem;
+  color: #262626;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.discussion-list {
+  display: grid;
+  gap: 20px;
+}
+
+.discussion-item {
+  padding: 20px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  border: 1px solid #eee;
+}
+
+.discussion-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px #0000001a;
+  border-color: #4CAF50;
+}
+
+.discussion-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #262626;
+  margin-bottom: 10px;
+  display: block;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.discussion-title:hover {
+  color: #4CAF50;
+}
+
+.discussion-meta {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.discussion-user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.discussion-user img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.discussion-stats {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.discussion-stats i {
+  font-size: 0.8rem;
+}
+
+/* Recent Activity */
+.recent-activity {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 5px 15px #0000000d;
+  margin-bottom: 30px;
+}
+
+.recent-activity h2 {
+  font-size: 1.8rem;
+  color: #262626;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.activity-list {
+  display: grid;
+  gap: 20px;
+}
+
+.activity-item {
+  display: flex;
+  gap: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.activity-item:hover {
+  background-color: #f9f9f9;
+}
+
+.activity-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4CAF50;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.activity-content {
+  flex: 1;
+}
+
+.activity-user {
+  font-weight: 600;
+  color: #262626;
+}
+
+.activity-text {
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 3px;
+}
+
+.activity-time {
+  color: #999;
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
+
+/* Active Users */
+.active-users {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 5px 15px #0000000d;
+}
+
+.active-users h2 {
+  font-size: 1.8rem;
+  color: #262626;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.user-list {
+  display: grid;
+  gap: 15px;
+}
+
+.user-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.user-item:hover {
+  background-color: #f9f9f9;
+  transform: translateX(5px);
+}
+
+.user-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #4CAF50;
+}
+
+.user-info {
+  flex: 1;
+}
+
+.user-name {
+  font-weight: 600;
+  color: #262626;
+  margin-bottom: 3px;
+}
+
+.user-tagline {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 992px) {
+  .community-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .community-header h1 {
+    font-size: 2rem;
+  }
+  
+  .discussion-meta {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .user-item {
+    gap: 10px;
+  }
+  
+  .user-avatar {
+    width: 40px;
+    height: 40px;
+  }
+}

@@ -1,0 +1,347 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kirang+Haerang&display=swap");
+
+/* Submission form container using flexbox */
+.submission-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    min-height: calc(100vh - 140px);
+}
+
+/* Main form styling with CSS positioning */
+.submission-form {
+    background: #fffffff2;
+    border-radius: 20px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 20px 40px #0000001a;
+    position: relative;
+}
+
+/* Form title */
+.form-title {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #262626;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-family: "Kirang Haerang", cursive;
+    background: linear-gradient(45deg, #39BD65, #FFAE00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Upload area with relative positioning */
+.upload-area {
+    background: #39BD65;
+    border-radius: 15px;
+    padding: 3rem 2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    position: relative;
+}
+
+.upload-area:hover {
+    background: #39BD65;
+}
+
+/* Upload icon positioning */
+.upload-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1rem;
+    fill: #ffffff;
+    display: block;
+}
+
+.upload-text {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Hidden file input with absolute positioning */
+#file-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Form group spacing */
+.form-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+/* Form input styling */
+.form-input {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    background: #ffffff;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #39BD65;
+}
+
+.form-input.error {
+    border-color: #C91940;
+}
+
+/* Textarea specific styling */
+.form-textarea {
+    resize: vertical;
+    min-height: 120px;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Radio button group using flexbox */
+.radio-group {
+    display: flex;
+    gap: 2rem;
+    margin: 1.5rem 0;
+    justify-content: center;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.radio-option input[type="radio"] {
+    width: 20px;
+    height: 20px;
+}
+
+.radio-option label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #262626;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Category section */
+.category-title {
+    text-align: center;
+    font-size: 1.4rem;
+    color: #262626;
+    margin: 1.5rem 0 1rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-family: "Kirang Haerang", cursive;
+    color: #4CAF50;
+}
+
+/* Category tags using CSS Grid */
+.category-tags {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+}
+
+/* Tag button styling */
+.tag-btn {
+    background: #39BD65;
+    color: #ffffff;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s;
+    font-family: "Poppins", sans-serif;
+}
+
+.tag-btn:hover {
+    background: #39BD65;
+    transform: translateY(-2px);
+}
+
+.tag-btn.selected {
+    background: #2e7d32;
+    box-shadow: 0 4px 8px #00000033;
+}
+
+/* Form actions using CSS Grid */
+.form-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* Button base styling */
+.btn {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Cancel button */
+.btn-cancel {
+    background: #f5f5f5;
+    color: #666;
+    border: 2px solid #e0e0e0;
+}
+
+.btn-cancel:hover {
+    background: #e0e0e0;
+}
+
+/* Publish button */
+.btn-publish {
+    background: #FFAE00;
+    color: #ffffff;
+}
+
+.btn-publish:hover {
+    background: #f57c00;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px #00000033;
+}
+
+/* Error message styling */
+.error-message {
+    color: #C91940;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    font-family: "Poppins", sans-serif;
+}
+
+/* File preview styling */
+.file-preview {
+    margin-top: 1rem;
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Mobile responsive styles */
+@media screen and (max-width: 768px) {
+    /* Adjust hamburger menu for submission page */
+    .navbar #hamburger-btn {
+        display: block;
+        cursor: pointer;
+    }
+    
+    /* Mobile navigation adjustments */
+    .navbar .all-links {
+        position: fixed;
+        left: -100%;
+        width: 300px;
+        display: block;
+        height: 100vh;
+        top: 75px;
+        background: #262626f2;
+        backdrop-filter: blur(10px);
+        transition: left 0.3s ease;
+    }
+
+    .navbar #menu-toggler:checked~.all-links {
+        left: 0;
+    }
+
+    /* Submission form mobile adjustments */
+    .submission-container {
+        padding: 1rem;
+    }
+
+    .submission-form {
+        padding: 1.5rem;
+    }
+
+    /* Category tags mobile layout */
+    .category-tags {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Radio group mobile layout */
+    .radio-group {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    /* Form actions mobile layout */
+    .form-actions {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Form title mobile size */
+    .form-title {
+        font-size: 1.8rem;
+    }
+    
+    /* Category title mobile size */
+    .category-title {
+        font-size: 1.2rem;
+    }
+    
+    /* Upload area mobile padding */
+    .upload-area {
+        padding: 2rem 1rem;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    /* Extra small screen adjustments */
+    .category-tags {
+        grid-template-columns: 1fr;
+    }
+    
+    .submission-form {
+        padding: 1rem;
+    }
+    
+    .form-title {
+        font-size: 1.5rem;
+    }
+    
+    .category-title {
+        font-size: 1.1rem;
+    }
+    
+    /* Footer mobile layout - consistent with about page */
+    footer div {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    footer .link {
+        gap: 1.5rem;
+    }
+}

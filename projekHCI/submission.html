@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submission | PICVERSE</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/submission.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <h2 class="logo"><a href="home.html">PICVERSE</a></h2>
+            <input type="checkbox" id="menu-toggler">
+            <label for="menu-toggler" id="hamburger-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
+                    <path d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M3 18h18v-2H3v2zm0-5h18V11H3v2zm0-7v2h18V6H3z"/>
+                </svg>
+            </label>
+            <ul class="all-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="submission.html" class="active">Submission</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="submission-container">
+        <div class="submission-form">
+            <h1 class="form-title">UPLOAD ARTWORK</h1>
+            
+            <form id="submission-form">
+                <!-- File Upload Area -->
+                <div class="upload-area" onclick="document.getElementById('file-input').click()">
+                    <svg class="upload-icon" viewBox="0 0 24 24">
+                        <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" fill="white"/>
+                        <path d="M12,11L16,15H13V19H11V15H8L12,11Z" fill="white"/>
+                    </svg>
+                    <div class="upload-text">Click to upload your artwork</div>
+                    <input type="file" id="file-input" accept="image/*" required>
+                </div>
+                <div class="file-preview" id="file-preview"></div>
+                <div class="error-message" id="file-error">Please select a valid image file</div>
+
+                <!-- Email Input -->
+                <div class="form-group">
+                    <input type="email" class="form-input" id="email" placeholder="EMAIL" required>
+                    <div class="error-message" id="email-error">Please enter a valid email address</div>
+                </div>
+
+                <!-- Artwork Title -->
+                <div class="form-group">
+                    <input type="text" class="form-input" id="title" placeholder="ARTWORK TITLE" required>
+                    <div class="error-message" id="title-error">Title must be between 3 and 50 characters</div>
+                </div>
+
+                <!-- Description -->
+                <div class="form-group">
+                    <textarea class="form-input form-textarea" id="description" placeholder="ADD DESCRIPTION" required></textarea>
+                    <div class="error-message" id="description-error">Description must be between 10 and 500 characters</div>
+                </div>
+
+                <!-- Artist Type Radio Buttons -->
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" id="human-artist" name="artist-type" value="human" required>
+                        <label for="human-artist">Human Artist</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="ai-generate" name="artist-type" value="ai" required>
+                        <label for="ai-generate">AI-Generate</label>
+                    </div>
+                </div>
+                <div class="error-message" id="artist-type-error">Please select artist type</div>
+
+                <!-- Category Selection -->
+                <div class="category-title">CATEGORY</div>
+                <div class="category-tags">
+                    <button type="button" class="tag-btn" data-tag="fanart">#fanart</button>
+                    <button type="button" class="tag-btn" data-tag="originalcharacter">#originalcharacter</button>
+                    <button type="button" class="tag-btn" data-tag="illustration">#illustration</button>
+                    <button type="button" class="tag-btn" data-tag="rkgk">#rkgk</button>
+                    <button type="button" class="tag-btn" data-tag="pixelart">#pixelart</button>
+                    <button type="button" class="tag-btn" data-tag="commission">#commission</button>
+                </div>
+                <div class="error-message" id="category-error">Please select at least one category</div>
+
+                <!-- Form Actions -->
+                <div class="form-actions">
+                    <button type="button" class="btn btn-cancel" onclick="resetForm()">CANCEL</button>
+                    <button type="submit" class="btn btn-publish">PUBLISH</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+      <div>
+        <span>Copyright © 2025 All Rights Reserved</span>
+        <span class="link">
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html">About Us</a>
+        </span>
+      </div>
+    </footer>
+
+    <script src="js/submission.js"></script>
+</body>
+</html>

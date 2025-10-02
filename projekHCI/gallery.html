@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | PICVERSE</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Fontawesome Link for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <h2 class="logo"><a href="home.html">PICVERSE</a></h2>
+        <input type="checkbox" id="menu-toggler">
+        <label for="menu-toggler" id="hamburger-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18V11H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </label>
+        <ul class="all-links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="gallery.html" class="active">Gallery</a></li>
+          <li><a href="submission.html">Submission</a></li>
+          <li><a href="community.html">Community</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="gallery-container">
+      <div class="community-header">
+        <h1>PICVERSE Gallery</h1>
+        <p>Discover and share amazing artwork from talented artists around the world.</p>
+      </div>
+      <div class="categories-section">
+        <h2>Categories</h2>
+        <div class="category-tags-container">
+          <div class="category-tags">
+            <span class="category-tag active" onclick="scrollToCategory('fanart')">#fanart</span>
+            <span class="category-tag" onclick="scrollToCategory('originalcharacter')">#originalcharacter</span>
+            <span class="category-tag" onclick="scrollToCategory('illustration')">#illustration</span>
+            <span class="category-tag" onclick="scrollToCategory('rkgk')">#rkgk</span>
+            <span class="category-tag" onclick="scrollToCategory('pixelart')">#pixelart</span>
+            <span class="category-tag" onclick="scrollToCategory('comission')">#comission</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="showcase-section">
+        <h3>Artwork Showcases</h3>
+        
+        <div class="category-group" id="fanart">
+          <h2 class="category-title">#Fanart</h2>
+          <div class="artwork-grid">
+            <div class="artwork-card" onclick="openModal('images/XIAOJIAJU.png', '\\(＞ ◡ ＜)/', '@XIAOJIAJU', '39k')">
+              <div class="artwork-image">
+                <img src="images/XIAOJIAJU.png" alt="Artwork">
+              </div>
+              <div class="artwork-info">
+                <h4>\(＞ ◡ ＜)/</h4>
+                <span class="artist">@XIAOJIAJU</span>
+                <div class="likes">
+                  <i class="fas fa-heart"></i>
+                  <span>39k</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="artwork-card" onclick="openModal('images/Lirseven.png', 'ATTENTION', '@Lirseven', '13k')">
+              <div class="artwork-image">
+                <img src="images/Lirseven.png" alt="Artwork">
+              </div>
+              <div class="artwork-info">
+                <h4>ATTENTION</h4>
+                <span class="artist">@Lirseven</span>
+                <div class="likes">
+                  <i class="fas fa-heart"></i>
+                  <span>13k</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="artwork-card" onclick="openModal('images/kumatangent.png', 'IBERIA QUEST', '@kumatangent', '9.8k')">
+              <div class="artwork-image">
+                <img src="images/kumatangent.png" alt="Artwork">
+              </div>
+              <div class="artwork-info">
+                <h4>IBERIA QUEST</h4>
+                <span class="artist">@kumatangent</span>
+                <div class="likes">
+                  <i class="fas fa-heart"></i>
+                  <span>9.8k</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="artwork-card" onclick="openModal('images/Diesel2b.png', 'Autumn Colors', '@Dieef2b', '3.6k')">
+              <div class="artwork-image">
+                <img src="images/Diesel2b.png" alt="Artwork">
+              </div>
+              <div class="artwork-info">
+                <h4>Autumn Colors</h4>
+                <span class="artist">@Dieef2b</span>
+                <div class="likes">
+                  <i class="fas fa-heart"></i>
+                  <span>3.6k</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="artwork-card" onclick="openModal('images/nokoya9.png', 'Recent Hara', '@nokoya9', '8.4k')">
+              <div class="artwork-image">
+                <img src="images/nokoya9.png" alt="Artwork">
+              </div>
+              <div class="artwork-info">
+                <h4>Recent Hara</h4>
+                <span class="artist">@nokoya9</span>
+                <div class="likes">
+                  <i class="fas fa-heart"></i>
+                  <span>8.4k</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="category-group" id="originalcharacter">
+          <h2 class="category-title">#Originalcharacter</h2>
+          <div class="artwork-grid">
+            <div class="artwork-card" onclick="openModal('images/noland0707.png', 'Work painting', '@noland0707', '7.6k')">
+              <div class="artwork-image">
+                <img src="images/noland0707.png" alt="Artwork">
+              </div>
+              <div class="artwork-info">
+                <h4>Work painting</h4>
+                <span class="artist">@noland0707</span>
+                <div class="likes">
+                  <i class="fas fa-heart"></i>
+                  <span>7.6k</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="artwork-card" onclick="openModal('images/Diesel2b.png', 'Autumn Colors', '@Dieef2b', '3.6k')">
+              <div class="artwork-image">
+                <img src="images/Diesel2b.png" alt="Artwork">
+              </div>
+              <div class="artwork-info">
+                <h4>Autumn Colors</h4>
+                <span class="artist">@Dieef2b</span>
+                <div class="likes">
+                  <i class="fas fa-heart"></i>
+                  <span>3.6k</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="artwork-card" onclick="openModal('images/nokoya9.png', 'Recent Hara', '@nokoya9', '8.4k')">
+              <div class="artwork-image">
+                <img src="images/nokoya9.png" alt="Artwork">
+              </div>
+              <div class="artwork-info">
+                <h4>Recent Hara</h4>
+                <span class="artist">@nokoya9</span>
+                <div class="likes">
+                  <i class="fas fa-heart"></i>
+                  <span>8.4k</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="artwork-card" onclick="openModal('images/_Achyue_.png', 'Gambler\'s Treasure', '@_Achyue_', '19k')">
+              <div class="artwork-image">
+                <img src="images/_Achyue_.png" alt="Artwork">
+              </div>
+              <div class="artwork-info">
+                <h4>Gambler's Treasure</h4>
+                <span class="artist">@_Achyue_</span>
+                <div class="likes">
+                  <i class="fas fa-heart"></i>
+                  <span>19k</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="artwork-card" onclick="openModal('images/vvsimyeol.png', 'Golden time', '@vvsimyeol', '30k')">
+              <div class="artwork-image">
+                <img src="images/vvsimyeol.png" alt="Artwork">
+              </div>
+              <div class="artwork-info">
+                <h4>Golden time</h4>
+                <span class="artist">@vvsimyeol</span>
+                <div class="likes">
+                  <i class="fas fa-heart"></i>
+                  <span>30k</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="category-group" id="rkgk">
+          <h2 class="category-title">#rkgk</h2>
+          <div class="artwork-grid">
+            <div class="artwork-card" onclick="openModal('images/Jin_GinGin.png', '222', '@Jin_GinGin', '6.9k')">
+              <div class="artwork-image">
+                <img src="images/Jin_GinGin.png" alt="Artwork">
+              </div>
+              <div class="artwork-info">
+                <h4>222</h4>
+                <span class="artist">@Jin_GinGin</span>
+                <div class="likes">
+                  <i class="fas fa-heart"></i>
+                  <span>6.9k</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="artwork-card" onclick="openModal('images/_Achyue_.png', 'Gambler\'s Treasure', '@_Achyue_', '19k')">
+              <div class="artwork-image">
+                <img src="images/_Achyue_.png" alt="Artwork">
+              </div>
+              <div class="artwork-info">
+                <h4>Gambler's Treasure</h4>
+                <span class="artist">@_Achyue_</span>
+                <div class="likes">
+                  <i class="fas fa-heart"></i>
+                  <span>19k</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="artwork-card" onclick="openModal('images/vvsimyeol.png', 'Golden time', '@vvsimyeol', '30k')">
+              <div class="artwork-image">
+                <img src="images/vvsimyeol.png" alt="Artwork">
+              </div>
+              <div class="artwork-info">
+                <h4>Golden time</h4>
+                <span class="artist">@vvsimyeol</span>
+                <div class="likes">
+                  <i class="fas fa-heart"></i>
+                  <span>30k</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="artwork-card" onclick="openModal('images/Lirseven.png', 'ATTENTION', '@Lirseven', '13k')">
+              <div class="artwork-image">
+                <img src="images/Lirseven.png" alt="Artwork">
+              </div>
+              <div class="artwork-info">
+                <h4>ATTENTION</h4>
+                <span class="artist">@Lirseven</span>
+                <div class="likes">
+                  <i class="fas fa-heart"></i>
+                  <span>13k</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="artwork-card" onclick="openModal('images/kumatangent.png', 'IBERIA QUEST', '@kumatangent', '9.8k')">
+              <div class="artwork-image">
+                <img src="images/kumatangent.png" alt="Artwork">
+              </div>
+              <div class="artwork-info">
+                <h4>IBERIA QUEST</h4>
+                <span class="artist">@kumatangent</span>
+                <div class="likes">
+                  <i class="fas fa-heart"></i>
+                  <span>9.8k</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <div id="artworkModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div class="modal-info">
+          <h3 id="modalTitle"></h3>
+          <p id="modalArtist"></p>
+          <p id="modalLikes"></p>
+        </div>
+      </div>
+
+      <div class="scroll-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <i class="fas fa-chevron-up"></i>
+      </div>
+    </main>
+
+    <footer>
+      <div>
+        <span>Copyright © 2025 All Rights Reserved</span>
+        <span class="link">
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html">About Us</a>
+        </span>
+      </div>
+    </footer>
+
+    <script>
+      function scrollToCategory(categoryId) {
+        const element = document.getElementById(categoryId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+          
+          document.querySelectorAll('.category-tag').forEach(tag => {
+            tag.classList.remove('active');
+          });
+          event.target.classList.add('active');
+        }
+      }
+      
+      function openModal(imageSrc, title, artist, likes) {
+        const modal = document.getElementById('artworkModal');
+        const modalImg = document.getElementById('modalImage');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalArtist = document.getElementById('modalArtist');
+        const modalLikes = document.getElementById('modalLikes');
+        
+        modal.style.display = "block";
+        modalImg.src = imageSrc;
+        modalTitle.textContent = title;
+        modalArtist.textContent = artist;
+        modalLikes.innerHTML = `<i class="fas fa-heart"></i> ${likes}`;
+      }
+      
+      function closeModal() {
+        document.getElementById('artworkModal').style.display = "none";
+      }
+      
+      window.onclick = function(event) {
+        const modal = document.getElementById('artworkModal');
+        if (event.target == modal) {
+          closeModal();
+        }
+      }
+    </script>
+  </body>
+</html>
